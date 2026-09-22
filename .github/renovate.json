@@ -1,0 +1,71 @@
+{
+  "extends": [
+    "config:recommended"
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["fastapi", "uvicorn", "sqlalchemy", "alembic"],
+      "groupName": "python-backend",
+      "groupSlug": "python-backend",
+      "schedule": ["before 10am on monday"],
+      "timezone": "Europe/Paris"
+    },
+    {
+      "matchPackageNames": ["next", "react", "typescript", "tailwindcss"],
+      "groupName": "frontend-core",
+      "groupSlug": "frontend-core",
+      "schedule": ["before 10am on monday"],
+      "timezone": "Europe/Paris"
+    },
+    {
+      "matchPackageNames": ["@tanstack/*", "@radix-ui/*", "lucide-react", "framer-motion"],
+      "groupName": "frontend-ui",
+      "groupSlug": "frontend-ui",
+      "schedule": ["before 10am on tuesday"],
+      "timezone": "Europe/Paris"
+    },
+    {
+      "matchPackageNames": ["pytest", "black", "isort", "flake8"],
+      "groupName": "python-dev",
+      "groupSlug": "python-dev",
+      "schedule": ["before 10am on wednesday"],
+      "timezone": "Europe/Paris"
+    },
+    {
+      "matchPackageNames": ["eslint", "prettier", "vitest", "msw"],
+      "groupName": "frontend-dev",
+      "groupSlug": "frontend-dev",
+      "schedule": ["before 10am on wednesday"],
+      "timezone": "Europe/Paris"
+    }
+  ],
+  "schedule": [
+    "before 10am on monday",
+    "before 10am on tuesday",
+    "before 10am on wednesday"
+  ],
+  "timezone": "Europe/Paris",
+  "rebaseWhen": "behind-base-branch",
+  "automerge": false,
+  "automergeType": "pr",
+  "labels": ["dependencies"],
+  "assignees": ["julienDALLA"],
+  "reviewers": ["julienDALLA"],
+  "prConcurrentLimit": 5,
+  "prHourlyLimit": 2,
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 10am on friday"],
+    "timezone": "Europe/Paris"
+  },
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "addLabels": ["security"]
+  },
+  "enabledManagers": [
+    "npm",
+    "pip",
+    "dockerfile",
+    "docker-compose"
+  ]
+}

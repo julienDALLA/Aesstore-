@@ -1,0 +1,27 @@
+# Code Owners
+# This file defines individuals or teams that are responsible for code in this repository.
+
+# Backend
+/backend/** @julienDALLA
+
+# Frontend
+/frontend/** @julienDALLA
+
+# Infrastructure
+Dockerfile* @julienDALLA
+docker-compose*.yml @julienDALLA
+.github/workflows/** @julienDALLA
+
+# Documentation
+*.md @julienDALLA
+
+# Configuration
+*.json @julienDALLA
+*.toml @julienDALLA
+*.yml @julienDALLA
+Makefile @julienDALLA
+
+# Root files
+.*.yml @julienDALLA
+.*.json @julienDALLA
+.*.md @julienDALLA
