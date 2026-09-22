@@ -19,7 +19,7 @@ COPY backend/requirements.txt .
 RUN pip install --no-cache-dir --user -r requirements.txt
 
 # Stage 2: Build frontend dependencies
-FROM node:18-alpine as frontend-deps
+FROM node:26-alpine as frontend-deps
 
 WORKDIR /app
 
