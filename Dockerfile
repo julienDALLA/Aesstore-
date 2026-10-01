@@ -2,7 +2,7 @@
 # This is a multi-stage build for development
 
 # Stage 1: Build backend dependencies
-FROM python:3.11-slim as backend-deps
+FROM python:3.14-slim as backend-deps
 
 WORKDIR /app
 
@@ -28,7 +28,7 @@ COPY frontend/package.json frontend/tsconfig.json frontend/next.config.js ./
 RUN npm install
 
 # Stage 3: Final production image
-FROM python:3.11-slim as production
+FROM python:3.14-slim as production
 
 WORKDIR /app
 

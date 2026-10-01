@@ -1,7 +1,7 @@
 # Dockerfile for Aesstore Development
 # This file is optimized for development with hot-reloading
 
-FROM python:3.11-slim
+FROM python:3.14-slim
 
 WORKDIR /app
 
